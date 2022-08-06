@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MainComponent from './MainComponent';
 import Profile from './Profile';
-import Instances from './Instances';
+import AllInstances from './AllInstances';
 
 class Main extends Component {
   constructor() {
@@ -34,15 +34,7 @@ class Main extends Component {
           org: 'GovTech',
           title: 'Data Scientist',
           date: 'Jul 2021 - Present',
-          items: [
-            {
-              id: 0,
-              item: {
-                text: 'Perform data sciencey items',
-                edit: false
-              }
-            }
-          ]
+          items: []
         }
       ],
       education: [
@@ -50,36 +42,13 @@ class Main extends Component {
           org: 'Cornell University',
           title: 'Major in Mathematics',
           date: '2007 - 2011',
-          items: [
-            {
-              id: 0,
-              item: {
-                text: 'Summa Cum Laude GPA 4.17/4.3',
-                edit: false
-              }
-            },
-            {
-              id: 1,
-              item: {
-                text: 'Recipient of Harry S. Kieval Prize in Mathematics',
-                edit: false
-              }
-            }
-          ]
+          items: []
         },
         {
           org: 'Raffles Junior College',
           title: "4 'A's and 3 Special Paper Distinctions",
           date: '2005 - 2006',
-          items: [
-            {
-              id: 0,
-              item: {
-                text: 'Represented Singapore in the International Mathematics Olympiad',
-                edit: false
-              }
-            }
-          ]
+          items: []
         }
       ]
     };
@@ -89,8 +58,8 @@ class Main extends Component {
     return (
       <div className='main'>
         <MainComponent title='PROFILE' content={<Profile />} />
-        <MainComponent title='EXPERIENCE' content={<Instances instances={this.state.jobs}/>} />
-        <MainComponent title='EDUCATION' content={<Instances instances={this.state.education}/>} />
+        <MainComponent title='EXPERIENCE' content={<AllInstances instances={this.state.jobs}/>} />
+        <MainComponent title='EDUCATION' content={<AllInstances instances={this.state.education}/>} />
       </div>
     )
   }

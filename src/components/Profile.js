@@ -1,4 +1,3 @@
-import { editableInputTypes } from '@testing-library/user-event/dist/utils';
 import React, { Component } from 'react';
 import EditableField from './EditableField';
 
