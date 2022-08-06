@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Contact from './Contact';
+import EditIcon from './EditIcon';
+import EditableField from './EditableField';
 
 function importAll(r) {
   let images = {};
@@ -10,15 +12,34 @@ function importAll(r) {
 const images = importAll(require.context('../images', false, /\.(png|jpe?g|svg)$/));
 
 class Header extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      personName: {
+        text: 'Edit name here',
+        edit: false
+      },
+      jobTitle: {
+        text: 'Edit title here',
+        edit: false
+      }
+    }
+  }
+
   render() {
+    const { personName, jobTitle } = this.state;
+    
     return (
       <div className='header'>
         <div class="header-top">
-          <div className='name'>Tham Zheng Kang</div>
-          <div className='job-title'>Statistician</div>
+          <EditableField edit={personName.edit} for='personName' this={this} name='name' value={personName.text} />
+          <EditIcon edit={personName.edit} for='personName' this={this} />
+          <EditableField edit={jobTitle.edit} for='jobTitle' this={this} name='job-title' value={jobTitle.text} />
+          <EditIcon edit={jobTitle.edit} for='jobTitle' this={this} />
         </div>
-        <Contact src={images['phone.svg']} text='+65 9647 5705' />
-        <Contact src={images['email.svg']} text='zt33@cornell.edu' />
+        <Contact src={images['phone.svg']} text='Edit phone number' />
+        <Contact src={images['email.svg']} text='Edit email' />
       </div>
     );
   }

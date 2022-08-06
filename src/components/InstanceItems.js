@@ -8,11 +8,11 @@ class InstanceItems extends Component {
   render() {
     return (
       <ul>
-        {this.props.tasks.map((task) => {
+        {this.props.items.map((task) => {
           return (
             <li>
               <div className='list-item'>
-                {task}
+                {task.text}
                 <img src={edit} alt='Edit'></img>
                 <img src={del} alt='Delete'></img>
               </div>

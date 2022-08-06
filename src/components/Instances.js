@@ -10,7 +10,7 @@ class Instances extends Component {
             <div className='org'>{instance.org}</div>
             <div>[<span className='title'>{instance.title}</span>]</div>
             <div className='date'>{instance.date}</div>
-            <InstanceItems tasks={instance.tasks}/>
+            <InstanceItems items={instance.items}/>
           </div>
           );
       })

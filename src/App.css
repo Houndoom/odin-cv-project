@@ -1,3 +1,11 @@
+:root {
+  --large: 2.5rem;
+  --medium: 1.5rem;
+  --small: 1rem;
+  --medium-space: 10px;
+  min-width: 900px;
+}
+
 /* Header Styles */
 
 .header {
@@ -15,27 +23,30 @@
   width: 500px;
   padding: 20px;
   display: grid;
-  gap: 10px;
+  gap: var(--medium-space);
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
 }
 
 .header-top .name {
-  font-size: 3rem;
+  font-size: var(--large);
 }
 
 .header-top .job-title {
-  font-size: 2rem;
+  font-size: var(--medium);
 }
 
 .contact {
-  font-size: 1rem;
-  height: 1rem;
+  font-size: var(--small);
+  height: var(--small);
   display: flex;
   place-self: center;
-  gap: 10px;
+  gap: var(--medium-space);
 }
 
 img {
-  height: 1rem;
+  height: var(--small);
 }
 
 /* Main styles */
@@ -51,24 +62,24 @@ img {
 }
 
 .main-title {
-  font-size: 2rem;
+  font-size: var(--medium);
   border-right: 1px solid black;
-  padding: 10px;
+  padding: var(--medium-space);
   justify-self: end;
 }
 
 .content {
-  padding: 10px;
+  padding: var(--medium-space);
 }
 
 .org {
-  font-size: 2rem;
+  font-size: var(--medium);
   font-weight: bold;
 }
 
 .title {
   font-style: italic;
-  margin-bottom: 10px;
+  margin-bottom: var(--medium-space);
 }
 
 .list-item {
