@@ -16,11 +16,17 @@ class Main extends Component {
           items: [
             {
               id: 0,
-              text: 'Streamlined work processes with programming'
+              item: {
+                text: 'Streamlined work processes with programming',
+                edit: false
+              }
             },
             {
               id: 1,
-              text: 'Coordinated the data processing, writing, and publication of major statistical reports such as the Household Expenditure Survey (HES) 2017/18 and Population Trends'
+              item: {
+                text: 'Coordinated the data processing, writing, and publication of major statistical reports such as the Household Expenditure Survey (HES) 2017/18 and Population Trends',
+                edit: false
+              }
             }
           ]
         },
@@ -31,7 +37,10 @@ class Main extends Component {
           items: [
             {
               id: 0,
-              text: 'Perform data sciencey items'
+              item: {
+                text: 'Perform data sciencey items',
+                edit: false
+              }
             }
           ]
         }
@@ -44,11 +53,17 @@ class Main extends Component {
           items: [
             {
               id: 0,
-              text: 'Summa Cum Laude GPA 4.17/4.3'
+              item: {
+                text: 'Summa Cum Laude GPA 4.17/4.3',
+                edit: false
+              }
             },
             {
               id: 1,
-              text: 'Recipient of Harry S. Kieval Prize in Mathematics'
+              item: {
+                text: 'Recipient of Harry S. Kieval Prize in Mathematics',
+                edit: false
+              }
             }
           ]
         },
@@ -59,7 +74,10 @@ class Main extends Component {
           items: [
             {
               id: 0,
-              text: 'Represented Singapore in the International Mathematics Olympiad' 
+              item: {
+                text: 'Represented Singapore in the International Mathematics Olympiad',
+                edit: false
+              }
             }
           ]
         }

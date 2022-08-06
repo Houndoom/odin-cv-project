@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
-import InstanceItems from './InstanceItems';
+import del from '../images/delete.svg'; 
+import edit from '../images/pencil.svg';
+import add from '../images/plus.svg';
+import InstanceItem from './InstanceItem';
 
 class Instances extends Component {
   render() {
@@ -10,7 +13,17 @@ class Instances extends Component {
             <div className='org'>{instance.org}</div>
             <div>[<span className='title'>{instance.title}</span>]</div>
             <div className='date'>{instance.date}</div>
-            <InstanceItems items={instance.items}/>
+              <ul>
+                {instance.items.map((task) => {
+                  return (
+                    <li>
+                      <div className='list-item'>
+                        <InstanceItem item={task} />
+                      </div>
+                    </li>);
+                })}
+                <img src={add} alt='Add'></img>
+              </ul>
           </div>
           );
       })

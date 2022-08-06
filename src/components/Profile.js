@@ -1,7 +1,6 @@
 import { editableInputTypes } from '@testing-library/user-event/dist/utils';
 import React, { Component } from 'react';
 import EditableField from './EditableField';
-import EditIcon from './EditIcon';
 
 class Profile extends Component {
   constructor() {
@@ -20,7 +19,6 @@ class Profile extends Component {
     return (
       <div className='profile-text'>       
         <EditableField edit={profile.edit} for='profile' this={this} name='profile' value={profile.text} />
-        <EditIcon edit={profile.edit} for='profile' this={this} />
       </div>
     );
   }

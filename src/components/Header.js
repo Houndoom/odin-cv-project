@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Contact from './Contact';
-import EditIcon from './EditIcon';
 import EditableField from './EditableField';
 
 function importAll(r) {
@@ -34,10 +33,8 @@ class Header extends Component {
       <div className='header'>
         <div class="header-top">
           <EditableField edit={personName.edit} for='personName' this={this} name='name' value={personName.text} />
-          <EditIcon edit={personName.edit} for='personName' this={this} />
           <EditableField edit={jobTitle.edit} for='jobTitle' this={this} name='job-title' value={jobTitle.text} />
-          <EditIcon edit={jobTitle.edit} for='jobTitle' this={this} />
-        </div>
+          </div>
         <Contact src={images['phone.svg']} text='Edit phone number' />
         <Contact src={images['email.svg']} text='Edit email' />
       </div>
