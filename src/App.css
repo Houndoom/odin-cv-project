@@ -51,6 +51,9 @@ img {
   height: var(--small);
 }
 
+input {
+  font-family: 'Times New Roman', sans-serif;
+}
 /* Main styles */
 
 .main {

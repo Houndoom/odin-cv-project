@@ -33,6 +33,12 @@ class Instance extends Component {
     })
   }
 
+  onEnter = (e) => {
+    if (e.key === 'Enter') {
+      fieldControl.confirmField.call(this, e);
+    }
+  }
+
   render() {
     const instance = this.state;
 
@@ -41,7 +47,7 @@ class Instance extends Component {
     if (!instance.title.edit) {
       titleField = <span className='title'>{instance.title.text}</span>
     } else {
-      titleField = <input className='title' onChange={fieldControl.handleChange.bind(this)} placeholder={instance.title.placeholder} data-for='title'></input>
+      titleField = <input className='title' onChange={fieldControl.handleChange.bind(this)} placeholder={instance.title.placeholder} data-for='title' onKeyDown={this.onEnter}></input>
     }
 
     return (
