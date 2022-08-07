@@ -16,15 +16,18 @@ class AllInstances extends Component {
     this.setState({
       allInstances: [...this.state.allInstances, {
         org: {
-          text: `Name of ${this.props.orgType}`,
+          placeholder: `Name of ${this.props.orgType}`,
+          text: '',
           edit: true
         },
         title: {
-          text: `${this.props.titleType}`,
+          placeholder: `${this.props.titleType}`,
+          text: '',
           edit: true
         },
         date: {
-          text: 'Year/duration',
+          placeholder: 'Year/duration',
+          text: '',
           edit: true
         },
         items: []

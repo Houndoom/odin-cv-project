@@ -8,7 +8,7 @@ class EditableField extends Component {
     if (!this.props.element.edit) {
       field = <div className={this.props.name}>{this.props.element.text}</div>
     } else {
-      field = <input className={this.props.name} onChange={fieldControl.handleChange.bind(this.props.this)} value={this.props.element.text} data-for={this.props.name}></input>
+      field = <input className={this.props.name} onChange={fieldControl.handleChange.bind(this.props.this)} placeholder={this.props.element.placeholder} value={this.props.element.text} data-for={this.props.name}></input>
     }
     let button = <EditButton name={this.props.name} this={this.props.this} element = {this.props.element} />;
 

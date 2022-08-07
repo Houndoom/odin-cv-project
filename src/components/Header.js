@@ -16,12 +16,14 @@ class Header extends Component {
 
     this.state = {
       personName: {
-        text: 'Edit name here',
-        edit: false
+        placeholder: 'Edit name here',
+        text: '',
+        edit: true
       },
       jobTitle: {
-        text: 'Edit title here',
-        edit: false
+        placeholder: 'Edit title here',
+        text: '',
+        edit: true
       }
     }
   }
@@ -35,8 +37,8 @@ class Header extends Component {
           <EditableField element={personName} this={this} name='personName' />
           <EditableField element={jobTitle} this={this} name='jobTitle' />
           </div>
-        <Contact src={images['phone.svg']} text='Edit phone number' />
-        <Contact src={images['email.svg']} text='Edit email' />
+        <Contact src={images['phone.svg']} placeholder='Edit phone number' />
+        <Contact src={images['email.svg']} placeholder='Edit email' />
       </div>
     );
   }

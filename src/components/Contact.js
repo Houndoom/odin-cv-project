@@ -7,8 +7,9 @@ class Contact extends Component {
     
     this.state = {
       contact: {
-        text: props.text,
-        edit: false
+        placeholder: props.placeholder,
+        text: '',
+        edit: true
       }
     };
   }

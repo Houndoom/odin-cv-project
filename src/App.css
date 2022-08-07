@@ -70,10 +70,12 @@ img {
   justify-self: end;
 }
 
-.profile-text, .title-field, .date-field {
+.profile-text, .title-field, .date-field, .list-item, .org-field {
   display: grid;
-  grid-template-columns: 1fr auto;
-  gap: var(--large-space);
+  grid-template-columns: 1fr;
+  grid-auto-flow: column;
+  align-items: center;
+  gap: var(--medium-space);
 }
 
 .content {
@@ -90,13 +92,12 @@ img {
   margin-bottom: var(--medium-space);
 }
 
-.list-item, .org-field {
-  display: grid;
-  grid-template-columns: 1fr auto auto;
-}
-
 .add-item {
   font-size: var(--very-small);
   display: flex;
   align-items: center;
+}
+
+.empty-space {
+  width: var(--small);
 }

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import EditableField from './EditableField';
+import EmptySpace from './EmptySpace';
 
 class Profile extends Component {
   constructor() {
@@ -7,8 +8,9 @@ class Profile extends Component {
 
     this.state = {
       profile: {
-        text: 'Provide a brief description of yourself here.',
-        edit: false
+        placeholder: 'Provide a brief description of yourself here',
+        text: '',
+        edit: true
       }
     };
   }
@@ -18,6 +20,7 @@ class Profile extends Component {
     return (
       <div className='profile-text'>       
         <EditableField element={profile} this={this} name='profile' />
+        <EmptySpace />
       </div>
     );
   }

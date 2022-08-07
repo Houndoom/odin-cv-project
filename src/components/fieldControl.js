@@ -3,6 +3,7 @@ const fieldControl = (() => {
     const fieldName = e.target.getAttribute('data-for');
     this.setState({
       [fieldName]: {
+        placeholder: this.state[fieldName].placeholder,
         text: this.state[fieldName].text,
         edit: true
       }
@@ -13,6 +14,7 @@ const fieldControl = (() => {
     const fieldName = e.target.getAttribute('data-for');
     this.setState({
       [fieldName]: {
+        placeholder: this.state[fieldName].placeholder,
         text: e.target.value,
         edit: true
       }
@@ -23,6 +25,7 @@ const fieldControl = (() => {
     const fieldName = e.target.getAttribute('data-for');
     this.setState({
       [fieldName]: {
+        placeholder: this.state[fieldName].placeholder,
         text: this.state[fieldName].text,
         edit: false
       }

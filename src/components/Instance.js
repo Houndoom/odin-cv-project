@@ -5,6 +5,7 @@ import EditableField from './EditableField';
 import EditButton from './EditButton';
 import fieldControl from './fieldControl';
 import DeleteButton from './DeleteButton';
+import EmptySpace from './EmptySpace';
 
 class Instance extends Component {
   constructor(props) {
@@ -17,6 +18,7 @@ class Instance extends Component {
     this.setState({
       items: [...this.state.items, {
         item: {
+          placeholder: '',
           text: '',
           edit: true
         }
@@ -39,7 +41,7 @@ class Instance extends Component {
     if (!instance.title.edit) {
       titleField = <span className='title'>{instance.title.text}</span>
     } else {
-      titleField = <input className='title' onChange={fieldControl.handleChange.bind(this)} value={instance.title.text} data-for='title'></input>
+      titleField = <input className='title' onChange={fieldControl.handleChange.bind(this)} placeholder={instance.title.placeholder} data-for='title'></input>
     }
 
     return (
@@ -53,9 +55,11 @@ class Instance extends Component {
             [{titleField}]
           </div>
           <EditButton element={instance.title} this={this} name='title' />
+          <EmptySpace />
         </div>
         <div className="date-field">
           <EditableField element={instance.date} this={this} name='date' />
+          <EmptySpace />
         </div>
         <ul>
           {instance.items.map((task, i) => {
