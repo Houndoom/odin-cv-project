@@ -17,7 +17,7 @@ class Profile extends Component {
     const { profile } = this.state;
     return (
       <div className='profile-text'>       
-        <EditableField edit={profile.edit} for='profile' this={this} name='profile' value={profile.text} />
+        <EditableField element={profile} this={this} name='profile' />
       </div>
     );
   }

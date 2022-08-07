@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import add from '../images/plus.svg';
 import InstanceItem from './InstanceItem';
+import EditableField from './EditableField';
 
 class Instance extends Component {
   constructor(props) {
@@ -26,20 +27,29 @@ class Instance extends Component {
     const instance = this.state;
     return (
       <div className='instance'>
-        <div className='org'>{instance.org}</div>
-        <div>[<span className='title'>{instance.title}</span>]</div>
-        <div className='date'>{instance.date}</div>
-          <ul>
-            {instance.items.map((task) => {
-              return (
-                <li>
-                  <div className='list-item'>
-                    <InstanceItem item={task} />
-                  </div>
-                </li>);
-            })}
+        <div className='org-field'>
+          <EditableField element={instance.org} this={this} name='org' />
+        </div>
+        <div>
+          [<span className='title'>{instance.title.text}</span>]
+        </div>
+        <div className="date-field">
+          <EditableField element={instance.date} this={this} name='date' />
+        </div>
+        <ul>
+          {instance.items.map((task) => {
+            return (
+              <li>
+                <div className='list-item'>
+                  <InstanceItem item={task} />
+                </div>
+              </li>);
+          })}
+          <div class="add-item">
             <img src={add} alt='Add' onClick={this.addItem}></img>
-          </ul>
+            Add item
+          </div>
+        </ul>
       </div>
       );
   }

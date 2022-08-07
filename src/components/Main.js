@@ -10,9 +10,18 @@ class Main extends Component {
     this.state = {
       jobs: [
         { 
-          org: 'Department of Statistics',
-          title: 'Senior Assistant Director',
-          date: 'Dec 2012 - Jun 2021',
+          org: {
+            text: 'Department of Statistics',
+            edit: false
+          },
+          title: {
+            text: 'Senior Assistant Director',
+            edit: false
+          },
+          date: {
+            text: 'Dec 2012 - Jun 2021',
+            edit: false
+          }, 
           items: [
             {
               id: 0,
@@ -29,25 +38,22 @@ class Main extends Component {
               }
             }
           ]
-        },
-        {
-          org: 'GovTech',
-          title: 'Data Scientist',
-          date: 'Jul 2021 - Present',
-          items: []
         }
       ],
       education: [
         {
-          org: 'Cornell University',
-          title: 'Major in Mathematics',
-          date: '2007 - 2011',
-          items: []
-        },
-        {
-          org: 'Raffles Junior College',
-          title: "4 'A's and 3 Special Paper Distinctions",
-          date: '2005 - 2006',
+          org: {
+            text: 'Cornell University',
+            edit: false
+          },
+          title: {
+            text: 'Major in Mathematics',
+            edit: false
+          },
+          date: {
+            text: '2007 - 2011',
+            edit: false
+          },
           items: []
         }
       ]
@@ -58,8 +64,8 @@ class Main extends Component {
     return (
       <div className='main'>
         <MainComponent title='PROFILE' content={<Profile />} />
-        <MainComponent title='EXPERIENCE' content={<AllInstances instances={this.state.jobs}/>} />
-        <MainComponent title='EDUCATION' content={<AllInstances instances={this.state.education}/>} />
+        <MainComponent title='EXPERIENCE' content={<AllInstances instances={this.state.jobs} type='Experience'/>} />
+        <MainComponent title='EDUCATION' content={<AllInstances instances={this.state.education} type='Education'/>} />
       </div>
     )
   }

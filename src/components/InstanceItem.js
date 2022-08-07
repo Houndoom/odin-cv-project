@@ -15,7 +15,7 @@ class InstanceItem extends Component {
     return (
       <li>
         <div className='list-item'>
-          <EditableField edit={item.edit} for='item' this={this} name='item' value={item.text} />
+          <EditableField element={item} this={this} name='item' />
           <img src={del} alt='Delete'></img>
         </div>
       </li>);

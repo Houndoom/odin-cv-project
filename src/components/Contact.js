@@ -18,7 +18,7 @@ class Contact extends Component {
     return (
       <div className='contact'>
         <img src={this.props.src} alt='Icon' />
-        <EditableField edit={contact.edit} for='contact' this={this} name='contact' value={contact.text} />
+        <EditableField element={contact} this={this} name='contact' />
         </div>
     );
   }

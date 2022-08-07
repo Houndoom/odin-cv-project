@@ -32,8 +32,8 @@ class Header extends Component {
     return (
       <div className='header'>
         <div class="header-top">
-          <EditableField edit={personName.edit} for='personName' this={this} name='name' value={personName.text} />
-          <EditableField edit={jobTitle.edit} for='jobTitle' this={this} name='job-title' value={jobTitle.text} />
+          <EditableField element={personName} this={this} name='personName' />
+          <EditableField element={jobTitle} this={this} name='jobTitle' />
           </div>
         <Contact src={images['phone.svg']} text='Edit phone number' />
         <Contact src={images['email.svg']} text='Edit email' />

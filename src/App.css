@@ -2,6 +2,7 @@
   --large: 2.5rem;
   --medium: 1.5rem;
   --small: 1rem;
+  --very-small: 0.7rem;
   --medium-space: 10px;
   --large-space: 30px;
   min-width: 900px;
@@ -30,11 +31,11 @@
   align-items: center;
 }
 
-.header-top .name {
+.header-top .personName {
   font-size: var(--large);
 }
 
-.header-top .job-title {
+.header-top .jobTitle {
   font-size: var(--medium);
 }
 
@@ -69,7 +70,7 @@ img {
   justify-self: end;
 }
 
-.profile-text {
+.profile-text, .org-field, .date-field {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: var(--large-space);
@@ -92,4 +93,10 @@ img {
 .list-item {
   display: grid;
   grid-template-columns: 1fr auto auto;
+}
+
+.add-item {
+  font-size: var(--very-small);
+  display: flex;
+  align-items: center;
 }
