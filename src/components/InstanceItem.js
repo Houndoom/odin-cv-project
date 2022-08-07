@@ -10,13 +10,14 @@ class InstanceItem extends Component {
       item: props.item.item
     };
   }
+
   render() {
     const { item } = this.state;
     return (
       <li>
         <div className='list-item'>
           <EditableField element={item} this={this} name='item' />
-          <img src={del} alt='Delete'></img>
+          <img src={del} alt='Delete' data-item-id={this.props.id} onClick={this.props.delFunc}></img>
         </div>
       </li>);
   }

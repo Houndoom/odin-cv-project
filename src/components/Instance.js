@@ -15,7 +15,6 @@ class Instance extends Component {
   addItem = (e) => {
     this.setState({
       items: [...this.state.items, {
-        id: this.state.items.length,
         item: {
           text: '',
           edit: true
@@ -23,6 +22,12 @@ class Instance extends Component {
       }]
     })
     console.log(this.state)
+  }
+
+  deleteItem = (e) => {
+    this.setState({
+      items: this.state.items.filter((_, i) => i !== parseInt(e.target.getAttribute('data-item-id')))
+    })
   }
 
   render() {
@@ -51,11 +56,11 @@ class Instance extends Component {
           <EditableField element={instance.date} this={this} name='date' />
         </div>
         <ul>
-          {instance.items.map((task) => {
+          {instance.items.map((task, i) => {
             return (
               <li>
                 <div className='list-item'>
-                  <InstanceItem item={task} />
+                  <InstanceItem item={task} id={i} delFunc={this.deleteItem}/>
                 </div>
               </li>);
           })}
