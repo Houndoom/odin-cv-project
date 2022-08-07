@@ -40,11 +40,13 @@
 }
 
 .contact {
+  box-sizing: border-box;
   font-size: var(--small);
-  height: var(--small);
+  height: var(--medium);
   display: flex;
   place-self: center;
   gap: var(--medium-space);
+  align-items: center;
 }
 
 img {
@@ -86,8 +88,9 @@ input {
   word-wrap: break-word;
 }
 
-.profile {
+div {
   overflow: auto;
+  word-wrap: break-word;
 }
 
 .org {
