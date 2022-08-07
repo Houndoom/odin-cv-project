@@ -64,8 +64,8 @@ class Main extends Component {
     return (
       <div className='main'>
         <MainComponent title='PROFILE' content={<Profile />} />
-        <MainComponent title='EXPERIENCE' content={<AllInstances instances={this.state.jobs} type='Experience'/>} />
-        <MainComponent title='EDUCATION' content={<AllInstances instances={this.state.education} type='Education'/>} />
+        <MainComponent title='EXPERIENCE' content={<AllInstances instances={this.state.jobs} type='Experience' orgType='company' titleType='job title'/>} />
+        <MainComponent title='EDUCATION' content={<AllInstances instances={this.state.education} type='Education' orgType='school' titleType='field of study'/>} />
       </div>
     )
   }
