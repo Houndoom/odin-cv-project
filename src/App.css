@@ -78,11 +78,16 @@ input {
   grid-template-columns: 1fr;
   grid-auto-flow: column;
   align-items: center;
-  gap: var(--medium-space);
+  gap: var(--medium-space); 
 }
 
 .content {
   padding: var(--medium-space);
+  word-wrap: break-word;
+}
+
+.profile {
+  overflow: auto;
 }
 
 .org {
