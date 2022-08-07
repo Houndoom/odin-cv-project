@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/odin-cv-project/static/css/main.31f16dd8.css",
+    "main.js": "/odin-cv-project/static/js/main.96effa84.js",
+    "index.html": "/odin-cv-project/index.html",
+    "static/media/plus.svg": "/odin-cv-project/static/media/plus.b254db15a65e850970533adfac778abd.svg",
+    "static/media/pencil.svg": "/odin-cv-project/static/media/pencil.8d317290131028fe10cf061de2c09812.svg",
+    "static/media/email.svg": "/odin-cv-project/static/media/email.c7a364af28c1fc7cbb30.svg",
+    "static/media/phone.svg": "/odin-cv-project/static/media/phone.261125e2a03acc2bac76.svg",
+    "static/media/delete.svg": "/odin-cv-project/static/media/delete.bde675c38d54979f589e6b290bea398a.svg",
+    "static/media/check.svg": "/odin-cv-project/static/media/check.ddce2e1e5ef60024f029ba651786c667.svg",
+    "main.31f16dd8.css.map": "/odin-cv-project/static/css/main.31f16dd8.css.map",
+    "main.96effa84.js.map": "/odin-cv-project/static/js/main.96effa84.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31f16dd8.css",
+    "static/js/main.96effa84.js"
+  ]
+}
