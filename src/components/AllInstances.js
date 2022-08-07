@@ -7,7 +7,7 @@ class AllInstances extends Component {
     super(props);
 
     this.state = {
-      allInstances: props.instances
+      allInstances: []
     }
   }
 
@@ -33,10 +33,16 @@ class AllInstances extends Component {
     console.log(this.state);
   }
 
+  deleteInstance = (e) => {
+    this.setState({
+      allInstances: this.state.allInstances.filter((_, i) => i !== parseInt(e.target.getAttribute('data-item-id')))
+    })
+  }
+
   render() {
     const Instances = [
-      this.state.allInstances.map((ins) => {
-        return <Instance instance={ins} />
+      this.state.allInstances.map((ins, i) => {
+        return <Instance instance={ins} id={i} delFunc={this.deleteInstance} />
       }),
       <div className="add-instance">
         <img src={add} alt='Add' onClick={this.addInstance}></img>

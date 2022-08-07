@@ -70,7 +70,7 @@ img {
   justify-self: end;
 }
 
-.profile-text, .org-field, .title-field, .date-field {
+.profile-text, .title-field, .date-field {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: var(--large-space);
@@ -90,7 +90,7 @@ img {
   margin-bottom: var(--medium-space);
 }
 
-.list-item {
+.list-item, .org-field {
   display: grid;
   grid-template-columns: 1fr auto auto;
 }

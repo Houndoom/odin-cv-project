@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import del from '../images/delete.svg'; 
+import DeleteButton from './DeleteButton';
 import EditableField from './EditableField';
 
 class InstanceItem extends Component {
@@ -17,7 +17,7 @@ class InstanceItem extends Component {
       <li>
         <div className='list-item'>
           <EditableField element={item} this={this} name='item' />
-          <img src={del} alt='Delete' data-item-id={this.props.id} onClick={this.props.delFunc}></img>
+          <DeleteButton id={this.props.id} delFunc={this.props.delFunc} />
         </div>
       </li>);
   }

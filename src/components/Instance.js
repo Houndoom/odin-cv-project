@@ -4,6 +4,7 @@ import InstanceItem from './InstanceItem';
 import EditableField from './EditableField';
 import EditButton from './EditButton';
 import fieldControl from './fieldControl';
+import DeleteButton from './DeleteButton';
 
 class Instance extends Component {
   constructor(props) {
@@ -45,6 +46,7 @@ class Instance extends Component {
       <div className='instance'>
         <div className='org-field'>
           <EditableField element={instance.org} this={this} name='org' />
+          <DeleteButton id={this.props.id} delFunc={this.props.delFunc} />
         </div>
         <div className='title-field'>
           <div className='title-span'>
