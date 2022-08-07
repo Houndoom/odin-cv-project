@@ -70,7 +70,7 @@ img {
   justify-self: end;
 }
 
-.profile-text, .org-field, .date-field {
+.profile-text, .org-field, .title-field, .date-field {
   display: grid;
   grid-template-columns: 1fr auto;
   gap: var(--large-space);

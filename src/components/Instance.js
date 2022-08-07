@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import add from '../images/plus.svg';
 import InstanceItem from './InstanceItem';
 import EditableField from './EditableField';
+import EditButton from './EditButton';
+import fieldControl from './fieldControl';
 
 class Instance extends Component {
   constructor(props) {
@@ -25,13 +27,25 @@ class Instance extends Component {
 
   render() {
     const instance = this.state;
+
+    // Ad-hoc EditableField as it needs to be a span to put it in the square brackets
+    let titleField;
+    if (!instance.title.edit) {
+      titleField = <span className='title'>{instance.title.text}</span>
+    } else {
+      titleField = <input className='title' onChange={fieldControl.handleChange.bind(this)} value={instance.title.text} data-for='title'></input>
+    }
+
     return (
       <div className='instance'>
         <div className='org-field'>
           <EditableField element={instance.org} this={this} name='org' />
         </div>
-        <div>
-          [<span className='title'>{instance.title.text}</span>]
+        <div className='title-field'>
+          <div className='title-span'>
+            [{titleField}]
+          </div>
+          <EditButton element={instance.title} this={this} name='title' />
         </div>
         <div className="date-field">
           <EditableField element={instance.date} this={this} name='date' />
